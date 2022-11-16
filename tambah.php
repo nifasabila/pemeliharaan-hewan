@@ -11,6 +11,7 @@
     <form action="proses_tambah.php" method="POST">
         <form>
             <fieldset>
+            <a href="hewan.php"><input type="button" name="back" value="Back"/></a>
             <p>
                 <label for="nama"> Nama Pemilik : </label>
                 <input type="text" name="nama"/>

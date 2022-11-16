@@ -1,8 +1,17 @@
 <html>
     <head>
 </head>
+<center>
 <body>
+<?php
+    session_start();
+    if($_SESSION['status']!="login"){
+     header("location:../login.php?pesan=belum_login");
+    }
+    ?>
+    <h4>Selamat datang, <?php echo $_SESSION['username']; ?>!anda telah login.</h4>
     <h1>Pemeriksaan Hewan Di RS Sumber Waras</h1>
+    <h4><a href="logout.php">LOGOUT</a></h4>
     <table border="1">
         <tr>
             <th>id</th>
@@ -28,5 +37,7 @@ while($db_pemeriksaanhewan=mysqli_fetch_array($query)){
 }
 ?>
 </table>
+<h4><a href="tambah.php"><input type="submit" name="tambah" value="tambah"/></h4></a>
+</center>
 </body>
 </html>
